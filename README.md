@@ -2,8 +2,6 @@
 
 ## Overview
 
-Project Origination Date: 2021-11-10
-
 ### Purpose
 
 The purpose of this project is to analyze production difficulties
