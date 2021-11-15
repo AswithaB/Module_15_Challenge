@@ -2,7 +2,7 @@
 
 ## Overview
 
-Project Origination Date: 2021-09-13
+Project Origination Date: 2021-11-10
 
 ### Purpose
 
@@ -30,44 +30,6 @@ that may help the manufacturing team to alleviate production difficulties.
 2. Summary Statistics on Suspension Coils
 3. T-Test on Suspension Coils
 4. Design a Study Comparing the MechaCar to the Competition
-
-### Resources
-
-- Software:
-	- R Version 4.1.1 (2021-08-10) (Libraries: dplyr, ggplot2, gridExtra)
-	- RStudio Version 1.4.1717
-- Data:
-	- `MechaCar_mpg.csv`
-		- Internal data collection, provided by AutoRUs Management
-		- Contains mpg test results for 50 prototype MechaCars (50 Records)
-	- `Suspension_Coil.csv`
-		- Internal data collection, provided by AutoRUs Management
-		- Contains results from multiple production lots (150 Records)
-
-Additional information about these resources is outlined below in Tables 1 & 2.
-
-**Table 1: `MechaCar_mpg.csv` Fields**
-| Field Name		| Brief Description of Contents |
-|-----------------------|-------------------------------|
-| `vehicle_length`      | Vehicle Length in US-Feet, ranging between 12 and 20. Decimal Feet to 8 Decimal Places.
-| `vehicle_weight`      | Vehicle Weight in US-Pounds, ranging between 2,000 and 10,000. Decimal Pounds to 6 Decimal Places.
-| `spoiler_angle`       | Spoiler Angle in Degrees, ranging between 0 and 90. Decimal Degrees to 8 Decimal Places.
-| `ground_clearance`    | Ground Clearance in US-Inches, ranging between 6 and 18. Decimal Inches to 8 Decimal Places.
-| `AWD`                 | "All-Wheel Drive" Boolean Qualifier. 1 means vehicle is All-Wheel Drive, 0 means vehicle is not All-Wheel Drive.
-| `mpg`                 | Fuel Efficiency measured in US-Miles-per-US-Gallon, ranging between 10 and 80. Decimal mpg to 8 Decimal Places.
-
-**Table 2: `Suspension_Coil.csv` Fields**
-| Field Name		| Brief Description of Contents |
-|-----------------------|-------------------------------|
-| `VehicleID`           | Alphanumeric Vehicle Identification Number. All values start with "V" followed by a 3-5 digit numeric sequence ranging between 213 and 49,408. 149 unique VehicleIDs among 150 records (V40607 is present twice, once with a record for Lot1, and once with a record for Lot2)
-| `Manufacturing_Lot`   | Alphanumeric Lot Number of Record. All values in the form of "LotN", with N being a single-digit integer, ranging between 1 and 3.
-| `PSI`                 | weight capability in US-Pounds-per-square-US-inch of suspension coils. Integer PSI values, ranging between 1,452 psi to 1,542 psi.
-
-#### Data Quality
-
-The data provided in both files appears to be consistent and reliable. All records correspond to the appropriate fields, measurements are presented with consistent units and fall within expected ranges, and there are no NULL values.
-
-## Deliverables
 
 ### Deliverable 1
 
@@ -151,9 +113,9 @@ It should be noted that the t-test is only used to compare the means of a sample
 in this case the variances of these samples are not in fact similar, therefore the conclusions drawn from these t-tests results should bear that fact in mind and remember that with the exception of the means, these
 sample and population distributions are not otherwise similar.
 
-The results obtained are summarized here in Table 3.
+The results obtained are summarized here in Table 1.
 
-**Table 3: Summary of t-test Results**
+**Table 1: Summary of t-test Results**
 | Sample           | Mean          | Population Mean     | p-value      | Test Outcome
 |------------------|---------------|---------------------|--------------|-------------
 | 50 Random        | 1499.76       | 1498.78             | 0.306        | Fail to reject Null Hypothesis. Means are statistically similar.
@@ -204,19 +166,10 @@ our final design decisions as the MechaCar moves from the Prototype stage into R
 	measure how closely the different Independent Variables correlate to the Dependent Variable of Number of Vehicle Model Units Sold. Multiple Linear Regression will help
 	us to quantify and predict which Cost and City Fuel Efficiency design goals should be implemented to achieve a desired outcome in Number of Vehicle Units Sold.
 
-	Predefined Criteria for these Statistical Tests is explained in further detail below in Table 4:
-
-	**Table 4: Statistical Test Criteria for Proposed Competitive Analysis Study**
-	| Statistical Test                  | Brief Explanation of Test Criteria
-	|-----------------------------------|-----------------------------------
-	| Paired Two-Sample t-test          | p-value less than 0.05, reject the Null Hypothesis, meaning either Cost or City Fuel Efficiency have statistically different Means between two different Vehicle Models.
-	| Two-Way ANOVA                     | p-value less than 0.05, reject the Null Hypothesis, meaning that the Cost or City Fuel Efficiency has a statistically meaningful contribution to the Number of Vehicle Model Units Sold for a given sample.
-	| Multiple Linear Regression        | p-value less than 0.05 for a given parameter, that parameter is unlikely to be contributing a random amount of variance to the outcome of the model. Coefficient of Determination (R^2) greater than 0.5, the Linear Regression Equation would be suitable to use for making predictions for possible outcomes based on new input variables.
-
 
 - Q: What data is needed?
 	- A: In order to test our Hypothesis, we will need to combine data from a few different sources. To narrow the scope of our study, we will limit our analysis to
-	the most recent complete 5 year periods prior to the COVID-19 Pandemic, or Calendar Year 2014-2019 in the Continental United States.
+	the most recent complete 5 year periods prior to the COVID-19 Pandemic, or Calendar Year 2015-2020 in the Continental United States.
 	
 	Baseline data for Total Auto Unit Sales can be obtained from the US Bureau of Economic Analysis. Additional Internal Estimations May have to be performed to
 	classify these Total Auto Unit Sales Figures into separate Vehicle Classes.
